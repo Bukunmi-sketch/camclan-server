@@ -1,0 +1,28 @@
+DROP DATABASE IF EXISTS zoom;
+
+CREATE DATABASE zoom;
+
+USE zoom;
+
+CREATE TABLE user_account (
+	id int(11) NOT NULL AUTO_INCREMENT,
+	user_email VARCHAR(255) NOT NULL,
+	user_password VARCHAR(255) NOT NULL,
+	user_full_name VARCHAR(255) NOT NULL,
+	user_avatar VARCHAR(255) NOT NULL,
+	PRIMARY KEY (id)
+);
+
+
+CREATE TABLE meeting (
+	id BIGINT NOT NULL AUTO_INCREMENT,
+	meeting_title VARCHAR(255) NOT NULL,
+	meeting_uid VARCHAR(255) NOT NULL,
+	created_by VARCHAR(255) NOT NULL,
+	date VARCHAR(255) NOT NULL,
+	time VARCHAR(255) NOT NULL,
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (id)
+);
+
+
